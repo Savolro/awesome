@@ -27,7 +27,7 @@ func (n *Noter) AddNote(title string, text string) (note Note, err error) {
 
 	err = n.Storage.SaveNote(note)
 	if err != nil {
-		return Note{}, err
+		return note, err
 	}
 
 	return note, nil
